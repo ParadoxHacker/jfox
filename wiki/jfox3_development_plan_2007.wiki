@@ -9,6 +9,47 @@
 
   2007，JFox将踏上它的EJB3之旅，这次，JFox将不再以通过Java EE认证作为目标，而将以“KISS”作为它的唯一原则，具体来说，那就是Lightweight, Simple, Practicability。
 = Details =
+=一、JFox3 is a Embeddable Java EE Application Server!=
+LightWeight 的重要举措是使JFox3成为一个Embeddable Only的EJB Container，Embeddable是JFox3做出的重大的决策，这意味着JFox3将不再以自我为中心，而改以前的嵌入Tomcat/Jetty作为Web Container为嵌入到Tomcat/Jetty/Resin等其它的Web Server中，因为Web Server仍然将是Web开发中最重要的部分。
+
+Simple则意味着JFox会对Java EE规范做进一步的取舍，具体如下：
+1、	模块化的支持
+2、	放弃支持EJB2
+3、	前期只支持 Local类型的EJB
+4、	前期只支持给予 SQL Template的Native JPA
+5、	增强TransactionManager和DataSource的可靠性，采用开源事务处理器JOTM和数据源XAPool。
+6、	内置对Web Service的支持，可以将EJB以Web Service方式发布出来，以提供远程访问能力
+
+JFox3将致力用20%的时间完成常用的80%的功能，并且让它尽可能好用。
+
+=二、JFox3 is Application Framework Ready!=
+JFox3将定位为提供完善的应用开发框架，以满足快速化开发的目标。人们需要的不仅仅是Java EE Application Server，还有Java Application Framework，而JFox也希望有更多的产品来使用它，让更多人从JFox中受益的同时，也让JFox能够不断完善。所以，JFox将从以下几个方面来支持Web应用开发。
+
+1、	IoC/AOP
+实际上JFox Application Server一直采用自己研发的IoC内核，并且以Dynamic Proxy 实现类AOP功能，所以在Application Framework上支持IoC/AOP是很容易的事情，JFox3将继续增强CMD(Container Managed Dependency)能力，采用 Annotation 来进行依赖注入的描述，而仅需要使用外置的properties文件来动态配置占位符参数，这样不仅将大大减少配置文件，而且也不失去配置文件的灵活性。
+
+同时加强组件之间的Event/Listener功能，对于内核发生的重要事件，实现了Listener组件都能够得到通知，以增强组件的之间和组件和内核之间通信能力。
+
+2、	MVC
+MVC将负责提供自动参数组装和校验，可控的Controller/Action接口，灵活的page flow的配置。
+
+JFox3将推荐采用template 技术, 以高效、纯洁的方式支持View层开发。
+
+3、	O/R Mapping
+JFox3 Application Framework将提供基于iBatis技术的DAO框架，采用NamedQuery 、SQL Template、Annotation、Dynamic Persistence Object Generation等技术大大减少编码和学习曲线的同时，保证O/R框架的可扩展性和可控性。
+
+4、	模块化的支持
+对于模块化的支持也将是JFox3 Application Framework提供的重要的功能，将支持OSGi一些重要的模块特性，可以在最大程度保证模块的封闭性的同时，将必要的服务对发布，支持和其它模块进行协作，将完全可以满足按模块开发，以及按模块部署和升级的需要。
+
+那JFox到底是集成了Application Framework的Application Server呢，还是内置了Java EE Application Server的Application Framework，这都不重要，总之，JFox将是一个集Application Server和Application Framework于一身的满足快速化开发需要的统一开发平台。
+
+=三、JFox3 will rewrite JPetstore to privode Best Practice!=
+JFox3将加强文档建设，提供较详尽的设计文档和应用开发指南，帮助感兴趣的爱好更深入的了解Java EE Application Server的工作原理，以及基于JFox的如何进行开发。
+
+	同时将提供 Best Practice应用，演示如何设计基于JFox3设计优秀的应用系统。
+
+=四、计划=
+	农历的2007发布第一个里程碑版。
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
