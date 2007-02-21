@@ -74,6 +74,6 @@ JFox3将完全重写JPetstore，为基于JFox3的Web应用开发提供指导；
 同时，将尽力提供详尽的设计文档和应用开发指南，帮助感兴趣的爱好更深入的了解Java EE Application Server的工作原理。
 
 =计划=
-	2007年3月发布第一个里程碑版，然后迭代两个版本，5月份之前发布正式版。
+2007年3月发布第一个里程碑版，然后迭代两个版本，5月份之前发布正式版。
 
 无论JFox是集成了Application Framework的Application Server呢，还是内置了Java EE Application Server的Application Framework，这都不重要，JFox的目标就是提供基于Java EE的统一开发平台，宗旨就是简单、快速、实用！
