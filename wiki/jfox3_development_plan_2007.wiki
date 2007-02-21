@@ -42,14 +42,16 @@ JFox Application Server一直采用自己研发的IoC内核，并且以Dynamic P
 JFox MVC实现了以下功能：
  * 请求的接入和分派
  * 实现自动参数组装和校验
-自动实现文件上传，就像使用一般的 input 一样
- * 执行 Action
+ 自动实现文件上传，就像使用一般的 input 一样
+ 参数验证失败的情况，提供了补偿的API。
+ * Action API
+ Action将作为一个标准的组件注入到JFox3的IoC内核中，这使得可以在Action中直接使用 @EJB 注入 EJB，减少了无聊的 jndi lookup 和 Service Locator(已经不再适用于EJB3)
  * Page flow 跳转
-可控的Controller/Action接口，灵活的。
+ 使用 Annotation来指定 success view 和 error view，并且支持动态view，特殊情况，还可以通过在程序中来改变 view 的名称。
 
-不再需要一大堆的XML配置，JFox MVC只有一个 web.xml 文件，已经配置好了两个 Servlet，一般情况下，你不要去关心它，开发的时候，完全和开发一个非Web一样。
+JFox MVC不再需要一大堆的XML配置，JFox MVC只有一个 web.xml 文件，已经配置好了两个 Servlet，一般情况下，你不要去关心它，开发的时候，完全和开发一个非Web一样。
 
-JFox3将推荐采用template 技术, 以高效、纯洁的方式支持View层开发。
+JFox3 MVC 在 view层默认采用 velocity template engine，当然你也仍然可以使用jsp，但是template 可更纯洁、更高效支持View层的开发，我实在想不出什么情况下一定得使用jsp。
 
 ==3、O/R Mapping==
 JFox3 Application Framework将提供基于iBatis技术的DAO框架，采用NamedQuery 、SQL Template、Annotation、Dynamic Persistence Object Generation等技术大大减少编码和学习曲线的同时，保证O/R框架的可扩展性和可控性。
@@ -73,5 +75,6 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
 
 
