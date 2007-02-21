@@ -10,7 +10,7 @@ JFox的初衷是为了让所有参与其中的贡献者更好的了解J2EE的细
 
 随着EJB3的出现，这种尴尬的局面正在逐渐有了改善，EJB3更简单，更POJO，加入IoC/AOP等思想，独立的JPA(Java Persistence API)，让EJB的开发人员第一次看到，原来EJB也可以这么简单。然后一个传统的应用服务器已经积重难返，一个全新设计的J2EE应用服务器仍然必不可少。
 
-2007，JFox将踏上它的EJB3之旅，JFox将不再以通过Java EE认证作为终极目标，而将以“KISS”作为它的唯一原则，提供一个快速的、适用的、完善的J2EE应用开发平台。具体的说，JFox3的就是：Lightweight, Simple, Practicability。
+2007，JFox将踏上它的EJB3之旅，JFox将不再以通过Java EE认证作为终极目标，而将以“KISS”作为它的最高原则，提供一个快速的、适用的、完善的J2EE应用开发平台。具体的说，JFox3的就是：Lightweight, Simple, Practicability。
 
 =JFox3 is a Embeddable Java EE Application Server! =
 
