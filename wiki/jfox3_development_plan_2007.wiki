@@ -37,8 +37,15 @@ JFox Application Server一直采用自己研发的IoC内核，并且以Dynamic P
 
 在IoC容器方面，JFox3将继续增强CMD(Container Managed Dependency)能力，适应当前趋势，采用 Annotation 来进行依赖注入的描述，而仅需要使用外置的properties文件来动态配置占位符参数，这样不仅将大大减少配置文件，而且也不失去配置文件的灵活性，终于可以不再为一大堆的XML配置文件而战战兢兢了 :)，同时加强组件之间的Event/Listener功能，对于IoC容器发生的重要事件，通过Event通过给感兴趣的Listener组件，以增强组件的之间以及组件和内核之间通信能力。
 
-==2、MVC==
-MVC将负责提供自动参数组装和校验，可控的Controller/Action接口，灵活的page flow的配置。
+==2、MVC框架支持==
+使用JFox MVC将大大简化Web应用的开发(注：可以参考jfox petstore)。
+JFox MVC实现了以下功能：
+ *接入
+ *自动参数组装和校验，
+自动实现文件上传，就像使用一般的 input 一样
+ *执行 Action
+ *page flow跳转
+可控的Controller/Action接口，灵活的。
 
 JFox3将推荐采用template 技术, 以高效、纯洁的方式支持View层开发。
 
@@ -64,7 +71,6 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
 
 
