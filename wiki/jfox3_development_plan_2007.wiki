@@ -73,8 +73,8 @@ JFox3对模块化的支持主要体现在模块最重要的两个方面，隔离
 JFox3将完全重写JPetstore，为基于JFox3的Web应用开发提供指导；
 同时，将尽力提供详尽的设计文档和应用开发指南，帮助感兴趣的爱好更深入的了解Java EE Application Server的工作原理。
 
-=Release Plan=
+=#Release Plan=
 2007年3月发布第一个里程碑版，然后迭代两个版本，5月份之前发布正式版。
 
-=Goal of JFox3=
+#=Goal of JFox3=
 JFox3率先在Application Server中集成Application Framework的，目标就是提供一个基于Java EE的简单、快速、实用开发平台！
