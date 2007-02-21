@@ -12,24 +12,26 @@ JFox的初衷是为了让所有参与其中的贡献者更好的了解J2EE的细
 
 2007，JFox将踏上它的EJB3之旅，JFox将不再以通过Java EE认证作为终极目标，而将以“KISS”作为它的唯一原则，提供一个快速的、适用的、完善的J2EE应用开发平台。具体的说，JFox3的就是：Lightweight, Simple, Practicability。
 
-=JFox3 is a Embeddable Java EE Application Server!=
+=JFox3 is a Embeddable Java EE Application Server! =
+
 Embeddable是JFox3为了实现LightWeight目标而做出的重大的决策，将使得测试和开发EJB组件就像开发Servlet组件一样简单。JFox3 将作为一个 Web application嵌入到Tomcat/Jetty/Resin等Web Server中，并为该 Web application提供EJB Container、Transaction Manager、JNDI、DataSource等服务。
 
 同时，为了满足Simple原则，JFox在尽可能满足Java EE规范的前途，按照8/2原则，做了取舍，具体如下：
 
-1、放弃支持EJB2 EJB1(有了EJB3，还会有多少应用考虑部署在EJB2上呢)
-2、前期只考虑支持 Local类型的EJB(80%情况下，EJB和Servlet均部署在一个JVM中)
-3、前期只支持给予 SQL Template的Native JPA(Native SQL可以满足100%的需要，但是纯的O/R不行)
+ * 放弃支持EJB2 EJB1(有了EJB3，还会有多少应用考虑部署在EJB2上呢)
+ * 前期只考虑支持 Local类型的EJB(80%情况下，EJB和Servlet均部署在一个JVM中)
+ * 前期只支持给予 SQL Template的Native JPA(Native SQL可以满足100%的需要，但是纯的O/R不行)
 
-同时JFox3将做以下增强，
-1、更好的支持分模块开发和部署
-2、增强TransactionManager和DataSource的可靠性，采用开源事务处理器JOTM和数据源XAPool。
-3、内置对Web Service的支持，可以将EJB以Web Service方式发布出来，以提供远程访问能力
+同时JFox3将做以下增强：
+ * 更好的支持分模块开发和部署
+ * 增强TransactionManager和DataSource的可靠性，采用开源事务处理器JOTM和数据源XAPool
+ * 内置对Web Service的支持，可以将EJB以Web Service方式发布出来，以提供远程访问能力
 
-JFox3将致力用20%的时间完成常用的80%的功能，并且让它尽可能好用。
+总之，JFox3将致力用20%的时间完成常用的80%的功能，并且让它尽可能好用。
 
-*=JFox3 is Application Framework Ready!=
-JFox3将定位为提供完善的应用开发框架，以满足快速化开发的目标。人们需要的不仅仅是Java EE Application Server，还有Java Application Framework，而JFox也希望有更多的产品来使用它，让更多人从JFox中受益的同时，也让JFox能够不断完善。所以，JFox将从以下几个方面来支持Web应用开发。
+=JFox3 is Application Framework Ready!=
+
+JFox3将定位为提供完善的应用开发框架，以满足快速化开发的目标。当前，人们需要的不仅仅是Java EE Application Server，还有Java Application Framework，JFox通过实现这个目标，来让更多的产品来使用，从而让更多人从JFox中受益的同时，也让JFox能够不断完善。所以，JFox将从以下几个方面来支持Web应用开发。
 
 ==1、IoC/AOP==
 实际上JFox Application Server一直采用自己研发的IoC内核，并且以Dynamic Proxy 实现类AOP功能，所以在Application Framework上支持IoC/AOP是很容易的事情，JFox3将继续增强CMD(Container Managed Dependency)能力，采用 Annotation 来进行依赖注入的描述，而仅需要使用外置的properties文件来动态配置占位符参数，这样不仅将大大减少配置文件，而且也不失去配置文件的灵活性。
@@ -50,6 +52,7 @@ JFox3 Application Framework将提供基于iBatis技术的DAO框架，采用Named
 那JFox到底是集成了Application Framework的Application Server呢，还是内置了Java EE Application Server的Application Framework，这都不重要，总之，JFox将是一个集Application Server和Application Framework于一身的满足快速化开发需要的统一开发平台。
 
 =JFox3 will rewrite JPetstore to privode Best Practice!=
+
 JFox3将加强文档建设，提供较详尽的设计文档和应用开发指南，帮助感兴趣的爱好更深入的了解Java EE Application Server的工作原理，以及基于JFox的如何进行开发。
 
 	同时将提供 Best Practice应用，演示如何设计基于JFox3设计优秀的应用系统。
@@ -61,3 +64,8 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+
+
+
+
