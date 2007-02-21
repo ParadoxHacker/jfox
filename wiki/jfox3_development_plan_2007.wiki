@@ -35,7 +35,7 @@ JFox3将定位为提供完善的应用开发框架，以满足快速化开发的
 ==1、IoC/AOP支持==
 JFox Application Server一直采用自己研发的IoC内核，并且以Dynamic Proxy 实现AOP功能，基于JFox3进行应用开发时，将可以直接使用JFox3 Application Server的IoC容器，所以，一旦一个应用组件被部署在JFox3中，将有能力注入JFox3 IoC容器中任何组件，包括EJBContainer，Transaction Manager等，虽然你可能很少会这样做，但是至少不会再出现以前Application Server有IoC容器的内核，而在应用开发仍然需要再部署一个类似Spring这样的IoC容器的麻烦。
 
-在IoC容器方面，JFox3将继续增强CMD(Container Managed Dependency)能力，适应当前趋势，采用 Annotation 来进行依赖注入的描述，而仅需要使用外置的properties文件来动态配置占位符参数，这样不仅将大大减少配置文件，而且也不失去配置文件的灵活性，终于可以不再为一大堆的XML配置文件而战战兢兢了 :)，同时加强组件之间的Event/Listener功能，对于IoC容器发生的重要事件，通过Event通过给感兴趣的Listener组件，以增强组件的之间以及组件和内核之间通信能力。
+在IoC容器方面，JFox3将继续增强CMD(Container Managed Dependency)能力，而在Dependency的描述方面，适应当前趋势，采用 Annotation 来进行依赖注入的描述，而仅需要使用外置的properties文件来动态配置占位符参数，这样不仅将大大减少配置文件，而且也不失去配置文件的灵活性，终于可以不再为一大堆的XML配置文件而战战兢兢了 :)，同时加强组件之间的Event/Listener功能，对于IoC容器发生的重要事件，通过Event通过给感兴趣的Listener组件，以增强组件的之间以及组件和内核之间通信能力。
 
 ==2、MVC框架支持==
 使用JFox MVC将大大简化Web应用的开发(注：可以参考jfox petstore)。
