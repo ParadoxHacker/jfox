@@ -13,7 +13,7 @@ JFox的初衷是为了让所有参与其中的贡献者更好的了解J2EE的细
 2007，JFox将踏上它的EJB3之旅，JFox将不再以通过Java EE认证作为终极目标，而将以“KISS”作为它的唯一原则，提供一个快速的、适用的、完善的J2EE应用开发平台。具体的说，JFox3的就是：Lightweight, Simple, Practicability。
 
 =JFox3 is a Embeddable Java EE Application Server!=
-LightWeight 的重要举措是使JFox3成为一个Embeddable Only的EJB Container，Embeddable是JFox3做出的重大的决策，这意味着JFox3将不再以自我为中心，而改以前的嵌入Tomcat/Jetty作为Web Container为嵌入到Tomcat/Jetty/Resin等其它的Web Server中，因为Web Server仍然将是Web开发中最重要的部分。
+Embeddable是JFox3为了实现LightWeight目标而做出的重大的决策，将使得测试和开发EJB组件就像开发Servlet组件一样简单。JFox3 的EJBContainer将作为一个 Web application嵌入到Tomcat/Jetty/Resin等所有Web Server中，并为该 Web application提供EJB Container、Transaction Manager、JNDI、DataSource等服务。
 
 Simple则意味着JFox会对Java EE规范做进一步的取舍，具体如下：
 1、	模块化的支持
@@ -58,5 +58,4 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
