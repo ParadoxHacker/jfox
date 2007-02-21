@@ -24,7 +24,7 @@ Simple则意味着JFox会对Java EE规范做进一步的取舍，具体如下：
 
 JFox3将致力用20%的时间完成常用的80%的功能，并且让它尽可能好用。
 
-=JFox3 is Application Framework Ready!=
+*=JFox3 is Application Framework Ready!=
 JFox3将定位为提供完善的应用开发框架，以满足快速化开发的目标。人们需要的不仅仅是Java EE Application Server，还有Java Application Framework，而JFox也希望有更多的产品来使用它，让更多人从JFox中受益的同时，也让JFox能够不断完善。所以，JFox将从以下几个方面来支持Web应用开发。
 
 ==1、IoC/AOP==
@@ -57,4 +57,6 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+
 
