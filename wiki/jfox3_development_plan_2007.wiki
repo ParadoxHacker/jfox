@@ -60,7 +60,10 @@ JFox3 Application Framework将提供基于iBatis技术的DAO框架，实际上�
 而在JPA部分，JFox只支持@NamedNativeQuery(实际上就是SQL Template)，这是JPA规范的一部分，也许HSQL/EJBQL更OO，但我始终认为只有Native SQL才能满足100%的需求，这也是iBatis能够生存下来的原因，同时学习曲线也大大降低，框架的可扩展性和可控性也更好，那么为什么不这么做呢？
 
 ==4、模块化的支持==
-大型项目必备
+支持模块化开发和部署是一个大型项目的开发平台必备的功能之一，但是Java界却一直没有指导思想，这种状况直到OSGi的被接受才有所改善。
+
+JFox3对模块化的支持主要在两个方面隔离和依赖，
+
 对于模块化的支持也将是JFox3 Application Framework提供的重要的功能，将支持OSGi一些重要的模块特性，可以在最大程度保证模块的封闭性的同时，将必要的服务对发布，支持和其它模块进行协作，将完全可以满足按模块开发，以及按模块部署和升级的需要。
 
 那JFox到底是集成了Application Framework的Application Server呢，还是内置了Java EE Application Server的Application Framework，这都不重要，总之，JFox将是一个集Application Server和Application Framework于一身的满足快速化开发需要的统一开发平台。
@@ -78,4 +81,3 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
