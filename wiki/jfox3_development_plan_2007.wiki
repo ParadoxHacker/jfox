@@ -55,7 +55,9 @@ JFox3 MVC 在 view层默认采用 velocity template engine，当然你也仍然�
 JFox MVC也采用了Annotation来进行各项描述(Action Method, Validator)，开发的时候，完全和开发一个非Web一样，EJB都POJO了，Web当然也要POJO！
 
 ==3、DAO(Data Access Layer)==
-JFox3 Application Framework将提供基于iBatis技术的DAO框架，采用NamedQuery 、SQL Template、Annotation、Dynamic Persistence Object Generation等技术大大减少编码和学习曲线的同时，保证O/R框架的可扩展性和可控性。
+JFox3 Application Framework将提供基于iBatis技术的DAO框架，实际上这是作为JPA的以部分提供的。如果你已经熟悉了iBatis，那么使用JFox的DAO就非常简单了，只不过JFox DAO采用了Annotation来描述Query，也就是JPA的NamedQuery，同时JFox DAO采用了Dynamic Persistence Object Generation技术，这让你在编写 Entity/Data Object/Persistence Object时，只需要提供接口，就可以了，不再需要那些无聊的 getter/setter，还有通过接口来申明Entity/DO/PO的还有其它的好处，比如多继承。
+
+而在JPA部分，JFox只支持@NamedNativeQuery(实际上就是SQL Template)，这是JPA规范的一部分，也许HSQL/EJBQL更OO，但我始终认为只有Native SQL才能满足100%的需求，这也是iBatis能够生存下来的原因，同时学习曲线也大大降低，框架的可扩展性和可控性也更好，那么为什么不这么做呢？
 
 ==4、模块化的支持==
 大型项目必备
@@ -76,5 +78,4 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
