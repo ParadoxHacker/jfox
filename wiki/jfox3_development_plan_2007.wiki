@@ -62,22 +62,19 @@ JFox3 Application Framework将提供基于iBatis技术的DAO框架，实际上�
 ==4、模块化的支持==
 支持模块化开发和部署是一个大型项目的开发平台必备的功能之一，但是Java界却一直没有指导思想，这种状况直到OSGi的被接受才有所改善。
 
-JFox3对模块化的支持主要在两个方面隔离和依赖，
+JFox3对模块化的支持主要体现在模块最重要的两个方面，隔离和依赖，对于版本的支持不打算实现，这留给专业化的模块化框架去做吧。
+隔离保证每个模块的封闭性，使得每个模块自成一体，这样才能实现独立的开发。
+而依赖，一方面模块可以发布一些对外服务的接口，使得其它模块可以通过该接口依赖本模块内的组件；另一方面可以引用其它模块发布的接口，而依赖于对方的服务组件。"依赖"使得模块部署之后能和其它模块协作，来完成整个系统，一般来说，运行时，模块不可能是完全的独立的。纯接口的依赖也使得模块的热部署成为可能(当然接口本身不能改！)
 
-对于模块化的支持也将是JFox3 Application Framework提供的重要的功能，将支持OSGi一些重要的模块特性，可以在最大程度保证模块的封闭性的同时，将必要的服务对发布，支持和其它模块进行协作，将完全可以满足按模块开发，以及按模块部署和升级的需要。
-
-那JFox到底是集成了Application Framework的Application Server呢，还是内置了Java EE Application Server的Application Framework，这都不重要，总之，JFox将是一个集Application Server和Application Framework于一身的满足快速化开发需要的统一开发平台。
+实现了模块的隔离和依赖，将可以满足按模块开发，部署和升级的需要！
 
 =JFox3 will rewrite JPetstore to privode Best Practice!=
 
-JFox3将加强文档建设，提供较详尽的设计文档和应用开发指南，帮助感兴趣的爱好更深入的了解Java EE Application Server的工作原理，以及基于JFox的如何进行开发。
-
-	同时将提供 Best Practice应用，演示如何设计基于JFox3设计优秀的应用系统。
+JFox3完全重写JPetstore，为基于JFox3的Web应用开发提供指导；
+同时，将尽力提供详尽的设计文档和应用开发指南，帮助感兴趣的爱好更深入的了解Java EE Application Server的工作原理。
 
 =计划=
 	农历的2007发布第一个里程碑版。
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+无论JFox是集成了Application Framework的Application Server呢，还是内置了Java EE Application Server的Application Framework，这都不重要，JFox的目标就是提供基于Java EE的统一开发平台，宗旨就是简单、快速、实用！
