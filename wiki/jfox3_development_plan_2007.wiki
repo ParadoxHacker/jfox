@@ -1,13 +1,15 @@
 #summary jfox3 2007 开发计划！
 #labels Featured
 
-= Introduction =
+= Why JFox3? =
 
-从2002到2007，JFox走过了5个春秋，感慨良多，JFox的初衷是为了让所有参与其中的贡献者更好的了解J2EE的细节，从而在工作中提供更优秀的J2EE的应用架构。然而，然后深入之后，相信很多人和我一样EJB的复杂性让每一个了解它的人失去了信心，转而倾向于采用without EJB的轻量级的架构，至少在我接触的产品中，令人惭愧的是，我更多的是充当EJB架构反对者！如何简化基于J2EE/EJB体系的应用的设计和开发已经成为摆在J2EE的规范制定者以及开发者面前的需要迫切解决的问题！
+从2002到2007，JFox走过了5个春秋，感慨良多，JFox的初衷是为了让所有参与其中的贡献者更好的了解J2EE的细节，从而在工作中提供更优秀的J2EE的应用架构。然而，在深入了解EJB之后，相信很多人和我一样，因为EJB的复杂性使得将其应用在项目中失去了信心，转而倾向于采用without EJB的轻量级的架构，至少在我接触的产品中，我更多的是充当EJB架构反对者，这实在是令人惭愧！
 
-随着EJB3的出现，这种尴尬的局面逐渐有了改善，EJB3更简单，更POJO，加入IoC/AOP等思想，独立的JPA，让EJB的开发人员第一次看到，原来EJB也可以这么简单。
+如何简化基于J2EE/EJB体系的应用的设计和开发已经成为摆在J2EE的规范制定者以及开发者面前的需要迫切解决的问题！
 
-2007，JFox将踏上它的EJB3之旅，这次，JFox将不再以通过Java EE认证作为目标，而将以“KISS”作为它的唯一原则，具体来说，那就是Lightweight, Simple, Practicability。
+随着EJB3的出现，这种尴尬的局面逐渐有了改善，EJB3更简单，更POJO，加入IoC/AOP等思想，独立的JPA(Java Persistence API)，让EJB的开发人员第一次看到，原来EJB也可以这么简单。
+
+2007，JFox将踏上它的EJB3之旅，这次，JFox将不再以通过Java EE认证作为终极目标，而将以“KISS”作为它的唯一原则，提供一个适用的完善的J2EE应用开发平台。具体的说，JFox3将努力实现：Lightweight, Simple, Practicability。
 
 =JFox3 is a Embeddable Java EE Application Server!=
 LightWeight 的重要举措是使JFox3成为一个Embeddable Only的EJB Container，Embeddable是JFox3做出的重大的决策，这意味着JFox3将不再以自我为中心，而改以前的嵌入Tomcat/Jetty作为Web Container为嵌入到Tomcat/Jetty/Resin等其它的Web Server中，因为Web Server仍然将是Web开发中最重要的部分。
@@ -55,3 +57,4 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
