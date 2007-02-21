@@ -77,4 +77,4 @@ JFox3将完全重写JPetstore，为基于JFox3的Web应用开发提供指导；
 2007年3月发布第一个里程碑版，然后迭代两个版本，5月份之前发布正式版。
 
 =Goal of JFox3=
-JFox3率先在Application Server中集成Application Framework的，目标就是提供一个基于Java EE的简单、快速、实用开发平台！
+JFox3率先在Application Server中集成Application Framework，目标就是提供一个基于Java EE的简单、快速、实用的开发平台！
