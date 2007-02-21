@@ -40,12 +40,14 @@ JFox Application Server一直采用自己研发的IoC内核，并且以Dynamic P
 ==2、MVC框架支持==
 使用JFox MVC将大大简化Web应用的开发(注：可以参考jfox petstore)。
 JFox MVC实现了以下功能：
- *接入
- *自动参数组装和校验，
+ * 请求的接入和分派
+ * 实现自动参数组装和校验
 自动实现文件上传，就像使用一般的 input 一样
- *执行 Action
- *page flow跳转
+ * 执行 Action
+ * Page flow 跳转
 可控的Controller/Action接口，灵活的。
+
+不再需要一大堆的XML配置，JFox MVC只有一个 web.xml 文件，已经配置好了两个 Servlet，一般情况下，你不要去关心它，开发的时候，完全和开发一个非Web一样。
 
 JFox3将推荐采用template 技术, 以高效、纯洁的方式支持View层开发。
 
@@ -71,6 +73,5 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
 
