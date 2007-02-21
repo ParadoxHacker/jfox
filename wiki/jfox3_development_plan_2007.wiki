@@ -13,15 +13,18 @@ JFox的初衷是为了让所有参与其中的贡献者更好的了解J2EE的细
 2007，JFox将踏上它的EJB3之旅，JFox将不再以通过Java EE认证作为终极目标，而将以“KISS”作为它的唯一原则，提供一个快速的、适用的、完善的J2EE应用开发平台。具体的说，JFox3的就是：Lightweight, Simple, Practicability。
 
 =JFox3 is a Embeddable Java EE Application Server!=
-Embeddable是JFox3为了实现LightWeight目标而做出的重大的决策，将使得测试和开发EJB组件就像开发Servlet组件一样简单。JFox3 的EJBContainer将作为一个 Web application嵌入到Tomcat/Jetty/Resin等所有Web Server中，并为该 Web application提供EJB Container、Transaction Manager、JNDI、DataSource等服务。
+Embeddable是JFox3为了实现LightWeight目标而做出的重大的决策，将使得测试和开发EJB组件就像开发Servlet组件一样简单。JFox3 将作为一个 Web application嵌入到Tomcat/Jetty/Resin等Web Server中，并为该 Web application提供EJB Container、Transaction Manager、JNDI、DataSource等服务。
 
-Simple则意味着JFox会对Java EE规范做进一步的取舍，具体如下：
-1、	模块化的支持
-2、	放弃支持EJB2
-3、	前期只支持 Local类型的EJB
-4、	前期只支持给予 SQL Template的Native JPA
-5、	增强TransactionManager和DataSource的可靠性，采用开源事务处理器JOTM和数据源XAPool。
-6、	内置对Web Service的支持，可以将EJB以Web Service方式发布出来，以提供远程访问能力
+同时，为了满足Simple原则，JFox在尽可能满足Java EE规范的前途，按照8/2原则，做了取舍，具体如下：
+
+1、放弃支持EJB2 EJB1(有了EJB3，还会有多少应用考虑部署在EJB2上呢)
+2、前期只考虑支持 Local类型的EJB(80%情况下，EJB和Servlet均部署在一个JVM中)
+3、前期只支持给予 SQL Template的Native JPA(Native SQL可以满足100%的需要，但是纯的O/R不行)
+
+同时JFox3将做以下增强，
+1、更好的支持分模块开发和部署
+2、增强TransactionManager和DataSource的可靠性，采用开源事务处理器JOTM和数据源XAPool。
+3、内置对Web Service的支持，可以将EJB以Web Service方式发布出来，以提供远程访问能力
 
 JFox3将致力用20%的时间完成常用的80%的功能，并且让它尽可能好用。
 
@@ -58,4 +61,3 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
