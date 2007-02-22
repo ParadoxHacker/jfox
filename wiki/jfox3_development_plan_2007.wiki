@@ -50,7 +50,7 @@ JFox MVC实现了以下功能：
  * Page flow 跳转
  使用 Annotation来指定 success view 和 error view，并且支持动态view，特殊情况，还可以通过在程序中来改变 view 的名称。
 
-JFox3 MVC 在 view层默认采用 velocity template engine，当然你也仍然可以使用jsp，但是template 可更纯洁、更高效支持View层的开发，我实在想不出什么情况下一定得使用jsp。
+JFox3 MVC 在 view层默认采用 velocity template engine，当然你也仍然可以使用jsp(强烈建议仅将JSP作为模板来用)，但是template 可更纯洁、更高效支持View层的开发，我实在想不出什么情况下一定得使用jsp。
 
 JFox MVC也采用了Annotation来进行各项描述(Action Method, Validator)，开发的时候，完全和开发一个非Web一样，EJB都POJO了，Web当然也要POJO！
 
