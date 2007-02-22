@@ -20,8 +20,8 @@
  *jfox3/WEB-INF/web.xml
  jfox3 web application 的配置文件，有这些重要的内容。
 
-这里配置了JFox启动时需要的加载的模块列表，如果你开发了新的模块，请在这里添加。
- {{{
+ 这里配置了JFox启动时需要的加载的模块列表，如果你开发了新的模块，请在这里添加。
+  {{{
 <context-param>
     <param-name>MODULES</param-name>
     <param-value>/WEB-INF/MODULES/manager,/WEB-INF/MODULES/petstore</param-value>
@@ -89,7 +89,6 @@
  jfox3的配置非常简单，需要的配置的内容包括web.xml以及persistence.xml。
 
 = JFox Module介绍 =
-
 
 
 
