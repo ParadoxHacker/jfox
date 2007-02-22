@@ -6,8 +6,12 @@
 本指南介绍如何基于Tomcat安装JFox3 Application Server。
 
 = 资源下载 =
-
+ * 下载tomcat http://tomcat.apache.org
+ * 下载jfox3 http://code.google.com/p/jfox
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+
+
