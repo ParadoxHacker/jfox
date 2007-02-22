@@ -1,12 +1,11 @@
 #summary jfox3安装指南，comming...
 #labels Phase-Support
 
-= Introduction =
+= 介绍 =
 
-Add your content here.
+本指南介绍如何基于Tomcat安装JFox3 Application Server。
 
-
-= Details =
+= 资源下载 =
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
