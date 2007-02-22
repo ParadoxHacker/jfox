@@ -11,9 +11,9 @@
 
 = 安装JFox =
 == 安装Tomcat ==
- 详细过程请参考 Tomat 安装手册...
+详细过程请参考 Tomat 安装手册...
 == 部署JFox ==
- 将下载的 jfox3.war 拷贝到 %TOMCAT_HOME%/webapps 下，启动Tomcat，jfox3即作为一个Web application部署在Tomcat中，jfox3部署之后，是一个标准的 Web application 的目录结构，该Web application将具备jfox3所提供的一切功能，EJB3 Container、JPA、JFox MVC等。
+将下载的 jfox3.war 拷贝到 %TOMCAT_HOME%/webapps 下，启动Tomcat，jfox3即作为一个Web application部署在Tomcat中，jfox3部署之后，是一个标准的 Web application 的目录结构，该Web application将具备jfox3所提供的一切功能，EJB3 Container、JPA、JFox MVC等。
 
 === JFox3的WEB-INF==
 JFox3的WEB-INF目录存放了除html、image、jsp之外的所有资源，其中包括所有jfox3需要的jar、class、配置文件，还有所有的应用模块，jfox3/WEB-INF/MODULES就是jfox3的模块部署目录，所有的模块都以目录的形式发布在这里，默认有一个manager模块。manager模块是jfox3内置的一个模块，展示了各种jfox3的example程序，通过这个模块，我们也可以了解以下jfox3模块的结构。JFox3 Module的结构在下面有专门讲述。
@@ -107,12 +107,37 @@ JFox3的WEB-INF目录存放了除html、image、jsp之外的所有资源，其�
  <persistence-unit name="default">说明在EJB3中，可以使用@PersistenceContext(unitName="default")来注入 EntityManager，<jta-data-source>java:/DefaultMySqlDS</jta-data-source> 指明了该DataSource的JNDI名称。
 
 
-= JFox Module介绍 =
+= JFox3 Module介绍 =
+基于JFox3开发的应用以模块(Module)的形式来发布，采用JFox3进行开发可以充分享受模块化开发和部署的好处。Module有自己结构和访问方式。
+部署时，每个Module拥有自己独立的ClassLoader。
+
 == 模块的目录结构 ==
-== 如何访问模块 ==
+Module的目录主要有这几部分组成：类路径，View模板路径，配置文件，以及其它目录和文件。
+
+=== 类路径 ===
+位于类路径的jar和class文件将能够被Module的ClassLoader搜索到，包括lib、WEB-INF/lib下所有的jar 和zip文件(含子目录)，以及classes、WEB-INF/classes下的class，还有conf下的文件。
+
+=== View模板路径 ===
+模板的默认目录名为 views，这里可以存放在jsp、image、以及所有用于显示的模板文件，jfox3 MVC默认配置了velocity作为模板引擎，web.xml中，配置了*.vm, *.vhtml, *.vhtm, *.tmpl后缀将使用velocity引擎来解析。
+
+== 如何通过浏览器访问模块 ==
+模块提供访问的内容主要有两部分，一是views中的静态文件(html，jsp)等，二是模块中的Servlet Action。
+
+比如manager模块，访问静态文件的 url 为：/jfox3/modules/manager/index.html，或者 /jfox3/modules/manager/index.jsp；
+
+访问Action的url为：/jfox3/modules/manager/example.view.do，example是 Action部署的id，view是Action中的ActionMethod，ActionMethod是用@ActionMethod描述的Action类中的方法，该Action应该类似如下的代码：
+ {{{
+@Service(id = "example")
+public class ExampleAction extends ActionSupport {
+
+    @ActionMethod(successView = "view.vhtml")
+    public void doGetView(InvocationContext invocationContext) throws Exception {
+    }
+}
+ }}}
+*NOTE:* 如果是通过 Http Get访问 example.view.do，会调用 doGetView 方法；如果通过 Http Post访问 example.view.do，会调用 doPostView 方法。
 
 = 安装JFox petstore =
-
 
 
 
