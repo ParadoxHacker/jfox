@@ -1,4 +1,4 @@
-#summary jfox3安装指南，comming...
+#summary jfox3安装指南
 #labels Phase-Support
 
 = 介绍 =
@@ -118,7 +118,7 @@ Module的目录主要有这几部分组成：类路径，View模板路径，配�
 位于类路径的jar和class文件将能够被Module的ClassLoader搜索到，包括lib、WEB-INF/lib下所有的jar 和zip文件(含子目录)，以及classes、WEB-INF/classes下的class，还有conf下的文件。
 
 === View模板路径 ===
-模板的默认目录名为 views，这里可以存放在jsp、image、以及所有用于显示的模板文件，jfox3 MVC默认配置了velocity作为模板引擎，web.xml中，配置了*.vm, *.vhtml, *.vhtm, *.tmpl后缀将使用velocity引擎来解析。
+模板的默认目录名为 views，这里可以存放在jsp、image、以及所有用于显示的模板文件，jfox3 MVC默认配置了velocity作为模板引擎，web.xml中，配置了`*.vm, *.vhtml, *.vhtm, *.tmpl`后缀将使用velocity引擎来解析。
 
 == 如何通过浏览器访问模块 ==
 模块提供访问的内容主要有两部分，一是views中的静态文件(html，jsp)等，二是模块中的Servlet Action。
@@ -138,7 +138,6 @@ public class ExampleAction extends ActionSupport {
 *NOTE:* 如果是通过 Http Get访问 example.view.do，会调用 doGetView 方法；如果通过 Http Post访问 example.view.do，会调用 doPostView 方法。
 
 = 安装JFox petstore =
-
 
 
 
