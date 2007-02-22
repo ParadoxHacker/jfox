@@ -19,32 +19,33 @@
  
  *jfox3/WEB-INF/web.xml
  jfox3 web application 的配置文件，有这些重要的内容。
- {{{
+
 这里配置了JFox启动时需要的加载的模块列表，如果你开发了新的模块，请在这里添加。
+ {{{
 <context-param>
     <param-name>MODULES</param-name>
     <param-value>/WEB-INF/MODULES/manager,/WEB-INF/MODULES/petstore</param-value>
 </context-param>
  }}}
 
- {{{
 这里配置模块中模板文件所在的目录，如下的配置表明每个模块的 views目录为模板文件所在的目录。
+ {{{
 <context-param>
     <param-name>VIEW_DIR</param-name>
     <param-value>views</param-value>
 </context-param>
  }}}
- 
- {{{
+
 这里配置Servlet Action的访问时，url后缀。
+ {{{
 <context-param>
     <param-name>ACTION_SUFFIX</param-name>
     <param-value>.do</param-value>
 </context-param>
  }}}
 
- {{{
 这里配置了JFox3的controller servlet，并用来响应所有/modules/*开头的url，controller servlet会负责根据url而把请求分发到正确的模块中，如：/modules/petstore/index.jsp，访问的是 petstore 模块中的 index.jsp
+ {{{
 <servlet>
     <servlet-name>controller_servlet</servlet-name>
     <servlet-class>net.sourceforge.jfox.mvc.servlet.ControllerServlet</servlet-class>
@@ -55,8 +56,9 @@
     <url-pattern>/modules/*</url-pattern>
 </servlet-mapping>
  }}}
- {{{
+
 这里配置JFox3的TemplateServlet，并为TemplateServlet配置了VelocityRender，同时指出*.vm,*.tmpl,*.vhtm,*.vhtml后缀的文件由VelocityRender负责渲染成html页面；servlet-mapping配置说明所有url后缀*.tmpl,*.vhtml的请求会由TemplateServlet负责响应，TempletServlet会根据init-param的配置再分发给不同的Render来处理。
+ {{{
 <servlet>
     <servlet-name>template_servlet</servlet-name>
     <servlet-class>net.sourceforge.jfox.mvc.servlet.TemplateServlet</servlet-class>
@@ -87,7 +89,6 @@
  jfox3的配置非常简单，需要的配置的内容包括web.xml以及persistence.xml。
 
 = JFox Module介绍 =
-
 
 
 
