@@ -6,9 +6,11 @@
 本指南介绍如何基于Tomcat安装JFox3 Application Server。
 
 = 资源下载 =
- * 下载tomcat http://tomcat.apache.org
- * 下载jfox3 http://code.google.com/p/jfox
+ * 下载Tomcat http://tomcat.apache.org
+ * 下载JFox3 http://code.google.com/p/jfox
 
-= 集成jfox到Tomcat =
+= 安装JFox=
+ * 安装Tomcat
+ 详细过程请参考 Tomat 安装手册
+ * 部署JFox
  将下载的 jfox3.war 拷贝到 %TOMCAT_HOME%/webapps 下，启动Tomcat，jfox3即作为一个Web application部署在Tomcat中，该Web application将具备jfox3所提供的一切功能，EJB3 Container、JPA、JFox MVC等。
-
