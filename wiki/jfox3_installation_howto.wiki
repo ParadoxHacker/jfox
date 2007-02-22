@@ -55,6 +55,32 @@
  <url-pattern>/modules/*</url-pattern>
 </servlet-mapping>
  }}}
+ {{{
+这里配置JFox3的TemplateServlet，并为TemplateServlet配置了VelocityRender，同时指出*.vm,*.tmpl,*.vhtm,*.vhtml后缀的文件由VelocityRender负责渲染成html页面；servlet-mapping配置说明所有url后缀*.tmpl,*.vhtml的请求会由TemplateServlet负责响应，TempletServlet会根据init-param的配置再分发给不同的Render来处理。
+<servlet>
+ <servlet-name>template_servlet</servlet-name>
+ <servlet-class>net.sourceforge.jfox.mvc.servlet.TemplateServlet</servlet-class>
+ <init-param>
+  <description>velocity render</description>
+  <param-name>net.sourceforge.jfox.mvc.velocity.VelocityRender</param-name>
+  <param-value>*.vm,*.tmpl,*.vhtm,*.vhtml</param-value>
+  </init-param>
+ <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+ <servlet-name>template_servlet</servlet-name>
+ <url-pattern>*.tmpl</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-mapping>
+ <servlet-name>template_servlet</servlet-name>
+ <url-pattern>*.vhtml</url-pattern>
+</servlet-mapping>
+.
+.
+.
+ }}}
+
  *jfox3/WEB-INF/MODUELS
 
  *jfox3/WEB-INF/MODUELS/manager
@@ -62,7 +88,6 @@
  jfox3的配置非常简单，需要的配置的内容包括web.xml以及persistence.xml。
 
 = JFox Module介绍 =
-
 
 
 
