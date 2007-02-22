@@ -85,11 +85,12 @@
  * jfox3/WEB-INF/MODUELS
  这是jfox3的模块部署目录，所有的模块都以目录的形式发布在这里，默认有一个manager模块。
  * jfox3/WEB-INF/MODUELS/manager
+ 这是jfox3内置的一个模块，通过这个模块，我们可以了解以下jfox3模块的结构，该模块也展示了各种jfox3的example程序。JFox3 Module的结构在下面有专门讲述。
 
  jfox3的配置非常简单，需要的配置的内容包括web.xml以及persistence.xml。
 
 = JFox Module介绍 =
 
-
+= 安装JFox petstore =
 
 
