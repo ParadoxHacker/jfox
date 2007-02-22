@@ -13,9 +13,13 @@
 == 安装Tomcat ==
  详细过程请参考 Tomat 安装手册...
 == 部署JFox ==
- 将下载的 jfox3.war 拷贝到 %TOMCAT_HOME%/webapps 下，启动Tomcat，jfox3即作为一个Web application部署在Tomcat中，该Web application将具备jfox3所提供的一切功能，EJB3 Container、JPA、JFox MVC等。
+ 将下载的 jfox3.war 拷贝到 %TOMCAT_HOME%/webapps 下，启动Tomcat，jfox3即作为一个Web application部署在Tomcat中，jfox3部署之后，是一个标准的 Web application 的目录结构，该Web application将具备jfox3所提供的一切功能，EJB3 Container、JPA、JFox MVC等。
+
+=== JFox3的WEB-INF==
+JFox3的WEB-INF目录除了html、image、jsp之外的所有资源，其中包括所有jfox3需要的jar、class、配置文件，还有所有的应用模块，jfox3/WEB-INF/MODULES是jfox3的模块部署目录，所有的模块都以目录的形式发布在这里，默认有一个manager模块。manager模块是jfox3内置的一个模块，展示了各种jfox3的example程序，通过这个模块，我们也可以了解以下jfox3模块的结构。JFox3 Module的结构在下面有专门讲述。
+
 ==配置 ==
- jfox3部署之后，是一个标准的 Web application 的目录结构，有一个WEB-INF目录，这里放着除了html、image、jsp之外的所有资源，但是WEB-INF下的有些目录和文件对于jfox3却是意义重大的。
+ jfox3的配置非常简单，需要的配置的内容主要包括web.xml以及persistence.xml。
  
 ===jfox3/WEB-INF/web.xml===
    jfox3 web application 的配置文件，有这些重要的内容。
@@ -102,17 +106,10 @@
  }}}
  <persistence-unit name="default">说明在EJB3中，可以使用@PersistenceContext(unitName="default")来注入 EntityManager，<jta-data-source>java:/DefaultMySqlDS</jta-data-source> 指明了该DataSource的JNDI名称。
 
-=== 模块目录 jfox3/WEB-INF/MODUELS ==
- 这是jfox3的模块部署目录，所有的模块都以目录的形式发布在这里，默认有一个manager模块。
- * jfox3/WEB-INF/MODUELS/manager
- 这是jfox3内置的一个模块，通过这个模块，我们可以了解以下jfox3模块的结构，该模块也展示了各种jfox3的example程序。JFox3 Module的结构在下面有专门讲述。
-
- jfox3的配置非常简单，需要的配置的内容包括web.xml以及persistence.xml。
 
 = JFox Module介绍 =
 
 = 安装JFox petstore =
-
 
 
 
