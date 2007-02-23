@@ -1,3 +1,3 @@
 #summary jfox3安装指南
 #labels Phase-Support
-请参考：http://groups.google.com/group/jfoxas/web/jfox3-2007
+请参考：http://groups.google.com/group/jfoxas/web/jfox3
